@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Principal - Bertioga</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Digital-7+Mono&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Navbar Lateral -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <img src="img/Brasão 3.jpg" alt="Brasão Bertioga" class="logo">
+                <h3>Prefeitura de Bertioga</h3>
+                <strong>Divisão de Monitoramento</strong>
+            </div>
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="index.html">
+                        <i class="fas fa-tachometer-alt"></i>
+                        Painel Principal
+                    </a>
+                </li>
+                <li>
+                    <a href="graficos.html">
+                        <i class="fas fa-chart-bar"></i>
+                        Gráficos
+                    </a>
+                </li>
+                <li>
+                    <a href="relatorios.html">
+                        <i class="fas fa-file-alt"></i>
+                        Relatórios
+                    </a>
+                </li>
+                <li>
+                    <a href="tabelas.html">
+                        <i class="fas fa-table"></i>
+                        Tabelas
+                    </a>
+                </li>
+            </ul>
+
+        <!-- Seção de Funcionários -->
+        <div class="team-container">
+            <h2>Equipe</h2>
+            <div class="team-member">
+                <img src="img/Edgar.jpg" alt="Foto Funcionário 1"> <!-- Substitua pelo caminho real da foto -->
+                <p><strong>Edgar Carolino</strong><br>Chefe da Divisão de Monitoramento</p>
+            </div>
+            <div class="team-member">
+                <img src="img/Leandro.jpg" alt="Foto Funcionário 2"> <!-- Substitua pelo caminho real da foto -->
+                <p><strong>Leandro dos Santos Lima</strong><br>Ajudante de Analise</p>
+            </div>
+            <div class="team-member">
+                <img src="img/Marcio.jpeg" alt="Foto Funcionário 3"> <!-- Substitua pelo caminho real da foto -->
+                <p><strong>Marcio dos Santos Lopes</strong><br>Ajudante de Analise</p>
+            </div>
+        </div>
+        <!-- Calendário Mensal -->
+        <div id="calendario-mensal" class="card">
+            <div class="card-content">
+                <h3>Calendário de </h3>
+                <table id="calendario">
+                    <thead>
+                        <tr>
+                            <th>Dom</th>
+                            <th>Seg</th>
+                            <th>Ter</th>
+                            <th>Qua</th>
+                            <th>Qui</th>
+                            <th>Sex</th>
+                            <th>Sáb</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </nav>
+
+        <!-- Conteúdo Principal -->
+        <div id="content">
+            <!-- Header com nome e logo -->
+            <section class="header">
+                <header class="main-header">
+                   <h2>Painel de Monitoramento - Bertioga</h2>
+                </header>    
+                <header class="relogio-header">
+                    <!-- Relógio Dinâmico Digital -->
+                    <div id="relogio-digital" class="card">
+                        <div class="card-content">
+                            <p id="horario"></p>
+                        </div>
+                    </div>                          
+                </header>
+            </section>
+            <!-- Seção com Cards -->
+            <section class="cards">
+                <div class="card">
+                    <i class="fas fa-tree"></i>
+                    <div class="card-content">
+                        <h3>Demolições</h3>
+                        <p>35</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <div class="card-content">
+                        <h3>Intimações</h3>
+                        <p>49</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <i class="fas fa-file-alt"></i>
+                    <div class="card-content">
+                        <h3>Autuações</h3>
+                        <p>33</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <i class="fas fa-chart-line"></i>
+                    <div class="card-content">
+                        <h3>Processos abertos</h3>
+                        <p>10</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <i class="fas fa-leaf"></i>
+                    <div class="card-content">
+                        <h3>Área de Cobertura Vegetal</h3>
+                        <p>65% do território</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <i class="fas fa-city"></i>
+                    <div class="card-content">
+                        <h3>Área Urbana</h3>
+                        <p>35% do território</p>
+                    </div>
+                </div>
+                <section class="cards">
+                    <!-- Card de Temperatura -->
+                    <div class="card">
+                        <i class="fas fa-thermometer-half"></i>
+                        <div class="card-content">
+                            <h3>Temperatura</h3>
+                            <p id="temperatura">-</p>
+                        </div>
+                    </div>
+                
+                    <!-- Card de Umidade -->
+                    <div class="card">
+                        <i class="fas fa-tint"></i>
+                        <div class="card-content">
+                            <h3>Umidade do Ar</h3>
+                            <p id="umidade">-</p>
+                        </div>
+                    </div>
+                
+                    <!-- Card de Precipitação -->
+                    <div class="card">
+                        <i class="fas fa-cloud-rain"></i>
+                        <div class="card-content">
+                            <h3>Precipitação</h3>
+                            <p id="precipitacao">-</p>
+                        </div>
+                    </div>
+                
+                    <!-- Card de pressao -->
+                    <div class="card">
+                        <i class="fas fa-cloud"></i>
+                        <div class="card-content">
+                            <h3>Pressão Atmosférica</h3>
+                            <p id="pressao">-</p>
+                        </div>
+                    </div>
+                
+                    <!-- Card de vento -->
+                    <div class="card">
+                        <i class="fas fa-sun"></i>
+                        <div class="card-content">
+                            <h3>Vento</h3>
+                            <p id="vento">-</p>
+                        </div>
+                    </div>
+                    <!-- Card de Sensação termica -->
+                    <div class="card">
+                        <i class="fas fa-sun"></i>
+                        <div class="card-content">
+                            <h3>Sensação Térmica</h3>
+                            <p id="sensacao-termica">-</p>
+                        </div>
+                    </div>
+                    <!-- Card de Cobertura de nuvens -->
+                    <div class="card">
+                        <i class="fas fa-sun"></i>
+                        <div class="card-content">
+                            <h3>Cobertura de Nuvens</h3>
+                            <p id="nuvens">-</p>
+                        </div>
+                    </div>
+                    <!-- Card de Condições Climáticas -->
+                    <div class="card">
+                        <i class="fas fa-sun"></i>
+                        <div class="card-content">
+                            <h3>Condições Climáticas</h3>
+                            <p id="descricao">-</p>
+                        </div>
+                    </div>
+                </section>
+                
+            </section>
+            
+            <div class="imagem-base">
+                <img src="img/Bertioga.PNG" alt="Bertioga">
+            </div> 
+                    
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

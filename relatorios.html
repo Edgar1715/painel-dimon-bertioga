@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatórios - Bertioga</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Navbar Lateral -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h3>Prefeitura de Bertioga</h3>
+            </div>
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="index.html">
+                        <i class="fas fa-tachometer-alt"></i>
+                        Painel Principal
+                    </a>
+                </li>
+                <li>
+                    <a href="graficos.html">
+                        <i class="fas fa-chart-bar"></i>
+                        Gráficos
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="relatorios.html">
+                        <i class="fas fa-file-alt"></i>
+                        Relatórios
+                    </a>
+                </li>
+                <li>
+                    <a href="tabelas.html">
+                        <i class="fas fa-table"></i>
+                        Tabelas
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Conteúdo Principal -->
+        <div id="content">
+            <header class="main-header">
+                <h2>Relatório Técnico - Bertioga</h2>
+            </header>
+
+            <section class="relatorio">
+                <div class="relatorio-header">
+                    <h3>Relatório de Atividades - 2024</h3>
+                    <button onclick="window.print()">Imprimir Relatório</button>
+                </div>
+                <div class="relatorio-conteudo">
+                    <p>Este relatório detalha as atividades de demolição, intimações e autuações realizadas em Bertioga durante o ano de 2024.</p>
+
+                    <div class="relatorio-grafico">
+                        <h4>Gráfico de Demolições por Mês</h4>
+                        <canvas id="grafico-demolicoes"></canvas>
+                    </div>
+
+                    <div class="relatorio-grafico">
+                        <h4>Gráfico de Intimações por Mês</h4>
+                        <canvas id="grafico-intimacoes"></canvas>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="relatorio.js"></script>
+</body>
+</html>

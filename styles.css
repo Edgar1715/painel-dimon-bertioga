@@ -1,0 +1,307 @@
+/* Estilos gerais */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #d3e8ff4b;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Previne rolagem */
+}
+.header {
+  display: flex;
+  justify-content: space-between; /* Distribui os cards uniformemente */
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  
+  
+}
+.main-header{
+  display: flex;
+  justify-content:space-around; 
+  width: 1100px;
+ }
+.main-header h2 {
+  align-items: center;
+  display: flex;
+   }
+   .relogio-header{
+    width: 400px;
+    display: flex;
+    
+   }
+
+.wrapper {
+  display: flex;
+  align-items: stretch;
+  
+}
+
+/* Sidebar */
+.sidebar {
+  width: 350px;
+  padding: 10px;
+  background: #ffffff;
+  color: #000000;
+  min-height: 100vh;
+  transition: all 0.3s;
+  overflow: hidden;
+  border: 2px solid #002d5e;
+  
+}
+
+.sidebar-header {
+  padding: 10px;
+  background: #ffffff;
+  text-align: center;
+  border-bottom: 2px solid #002d5e;
+
+}
+
+.sidebar-header img.logo {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.sidebar ul.components {
+  padding: 10px 0;
+}
+
+.sidebar ul li {
+  padding: 7px;
+  font-size: 1.1em;
+}
+
+.sidebar ul li a {
+  color: #000000;
+  display: block;
+  text-decoration: none;
+}
+
+.sidebar ul li a:hover, .sidebar ul li.active > a {
+ border: 2px solid #002d5e;
+ border-radius: 7px;
+  color: #000000;
+ padding: 2px;
+}
+
+/* Conteúdo Principal */
+#content {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main-header {
+  background: #002d5e;
+  color: rgb(255, 255, 255);
+ 
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.main-header h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  justify-content: space-between; /* Distribui os cards uniformemente */
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap; /* Permite que os cards se ajustem em telas menores */
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1; /* Cards ocupam espaço uniformemente */
+  display: flex;
+  align-items: center;
+  max-width: calc(100% / 6 - 10px); /* Seis cards por linha */
+  min-width: 150px;
+  transition: transform 0.3s;
+}
+
+.card i {
+  font-size: 2em;
+  margin-right: 10px;
+  color: #0056b3;
+}
+
+.card-content h3 {
+  margin: 0;
+  font-size: 1em;
+  }
+
+.card-content p {
+  margin: 5px 0 0;
+  font-size: 1.2em;
+  color: #000000;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Seção de Funcionários na Barra Lateral */
+/* Seção de Funcionários na Barra Lateral */
+.team-member {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  
+}
+
+.team-container{
+ color: #000000;
+ background-color: #ffffff;
+ height: 300px;
+ border-bottom: 2px solid #002d5e;
+}
+.team-container h2 {
+  background-color: #ffffff;
+  text-align: center;
+ padding: 2px;
+ border-top: 2px solid #002d5e;
+}
+
+.team-member img {
+  width: 60px; /* Imagem menor */
+  height: 60px; /* Imagem menor */
+  border-radius: 50%; /* Formato redondo */
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.178);
+  margin-right: 15px; /* Espaço entre imagem e texto */
+  
+}
+
+.team-member p {
+  font-size: 16px;
+  margin: 0;
+  color: #000000;
+}
+
+@media (max-width: 800px) {
+  .main-content {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .chart-container,
+  .team-container {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .team-member img {
+      width: 60%;
+  }
+}
+
+
+/* Responsividade */
+@media (max-width: 1200px) {
+  .card {
+      max-width: calc(100% / 4 - 10px); /* Quatro cards por linha */
+  }
+}
+
+@media (max-width: 768px) {
+  .cards {
+      flex-direction: column;
+  }
+
+  .card {
+      width: 100%;
+  }
+}
+/* Contêiner para alinhamento do relógio e calendário */
+.info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Ajustes para os cards de relógio e calendário */
+#relogio-digital, #calendario-mensal {
+  flex: 1;
+  font-size: 10px;
+  
+}
+
+/* Relógio Digital Estilizado */
+#relogio-digital {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff; /* Fundo preto para estilo digital clássico */
+  font-family: 'Digital-7 Mono', sans-serif; /* Fonte clássica de relógio digital */
+  font-size: 1.5em; /* Aumentar o tamanho da fonte para destaque */
+  border-radius: 15px;
+   max-width: 20%;
+   box-shadow: 0 4px 10px rgba(0, 68, 255, 0.6);
+}
+#relogio{
+  color: white;
+}
+
+/* Estilo do card de calendário */
+#calendario-mensal {
+  flex: 1;
+  max-width: 100%;
+  height: 140px;
+  display:flex;
+  justify-content: center;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 68, 255, 0.6); /* Sombra com tom verde */
+  padding: 40px;
+}
+#calendario-mensal h3 {
+  font-size: 14px;
+}
+
+/* Estilo da Tabela do Calendário */
+#calendario {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+#calendario th, #calendario td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  font-size: 1em;
+}
+
+#calendario th {
+  background-color: #0056b3;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+#calendario td {
+  background-color: white;
+  color: #002d5e;
+}
+
+#calendario td:hover {
+  background-color: #f1f1f1;
+}
+
+.imagem-base img {
+  width: 100%;
+  height: 80%;
+  border-radius: 5px;
+  border: 1px solid #002d5e;
+}
